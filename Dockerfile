@@ -35,7 +35,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Create necessary directories with proper permissions
-RUN mkdir -p input output checkpoints \
+RUN mkdir -p input output \
     && chmod -R 755 /app
 
 # Ensure test.py is executable

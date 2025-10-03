@@ -11,8 +11,6 @@ services:
       - ./input:/app/input:ro
       # Mount output directory for results
       - ./output:/app/output
-      # Mount checkpoints directory for model files
-      - ./checkpoints:/app/checkpoints:ro
     
     environment:
       - PYTHUNBUFFERED=1
