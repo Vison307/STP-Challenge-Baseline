@@ -1,0 +1,21 @@
+# Core scientific computing libraries
+numpy==1.26.4
+scipy==1.15.3
+pandas==2.3.2
+
+# Single-cell analysis
+scanpy==1.11.4
+anndata==0.11.4
+
+# Machine learning
+scikit-learn==1.7.2
+
+# Progress bars
+tqdm==4.67.1
+
+# Data storage (HDF5 support)
+h5py==3.14.0
+
+# Additional utilities
+matplotlib==3.10.6
+seaborn==0.13.2

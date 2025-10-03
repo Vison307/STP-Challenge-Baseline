@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  stp-test:
+    build: .
+    image: stp-baseline:latest
+    container_name: stp-baseline-test
+    
+    volumes:
+      # Mount input directory for data files
+      - ./input:/app/input:ro
+      # Mount output directory for results
+      - ./output:/app/output
+      # Mount checkpoints directory for model files
+      - ./checkpoints:/app/checkpoints:ro
+    
+    environment:
+      - PYTHUNBUFFERED=1
+      - PYTHONHASHSEED=42
+    
+    # Ensure the container runs the test script
+    command: python test.py
+    
+    restart: "no"
